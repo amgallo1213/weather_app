@@ -1,3 +1,7 @@
+I wanted to make a simple weather app as a small post-mother's day gift for my weather-obsessed mother. 
+
+---------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
