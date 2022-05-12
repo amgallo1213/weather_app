@@ -9,7 +9,6 @@ function App() {
       <main>
         <Forecast />
       </main>
-      {/* <footer>created by Your Youngest</footer> */}
     </div>
   );
 }

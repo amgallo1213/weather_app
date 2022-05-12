@@ -21,6 +21,7 @@ footer  {
 }
 img {
   margin: 20px;
+  height: 600px;
 }
 .Small {
   color: red;
@@ -37,4 +38,7 @@ img {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+.Btn  {
+  padding: 20px;
 }

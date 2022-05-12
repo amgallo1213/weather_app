@@ -79,8 +79,8 @@ const Forecast = () => {
                             Celsius
                         </label>
                     </div>
-                    <div>
-                        <Button type="submit" variant="info">Get Forecast</Button>
+                    <div className="Btn">
+                        <Button type="submit" variant="info" >Get Forecast</Button>
                     </div>
                 </div>
             </form>
