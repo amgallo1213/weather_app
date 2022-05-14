@@ -1,31 +1,55 @@
 
-
-.App {
-  display: flex;
-  flex-direction: column;
-  width: 850px;
-  margin: 0 auto;
-  margin-top: 50px;
-  border: 1px dotted black;
-  text-align: center;
-  font-weight: 100;
-  background-color: white;
-}
-footer  {
-  margin: 10px;
-}
 .Main {
   display: flex;
-  flex-direction: column;;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-right: 200px;
+  font-weight: 300;
+  background-color: white; 
+}
+h1, .Creator  {
+  margin-left: 900px;
+}
+.Top  {
+  padding: 10px;
+  margin: 20px;
+}
+.Left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px dotted black;
+  margin-right: 10px;
+}
+.Right  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  border: 1px dotted black;
+}
+.Find {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+.Current{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: 100;
+  padding: 20px;
 }
 .Degree {
   margin: 10px;
 }
 img {
-  margin: 20px;
-  height: 600px;
+  padding: 20px;
+  height: 650px;
 }
-.Small {
+/* .Small {
   color: red;
 }
 .Loader {
@@ -40,7 +64,15 @@ img {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-}
+} */
 .Btn  {
   padding: 20px;
+}
+.Days {
+  display: flex;
+  flex-direction: row;
+}
+.OneDay {
+  margin: 5px;
+  font-weight: 500;
 }

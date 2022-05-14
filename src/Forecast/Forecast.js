@@ -42,51 +42,22 @@ const Forecast = () => {
             .catch(err => console.error(err));
     }
     return ( 
-        <div>
-            <h2>Find Current Weather Conditions</h2>
+        <div> 
+            <div className="Top">
+                <h2>Find Current Weather Conditions</h2>
+                <form onSubmit={getForecast}>
+                    <div className="Find">
+                            <input type="text" placeholder="Enter City" maxLength="50"  value={city} 
+                                onChange={(e) => setCity(e.target.value)} />
+                        
+                            <Button type="submit" variant="info" className="Btn" >Get Forecast</Button>
+                    </div>
+                </form>
+            </div>
+            <div className="Current">
+                <Conditions responseObj={responseObj}  />
+            </div>
             
-            <form onSubmit={getForecast}>
-                <div className="Main">
-                    <div>
-                        <input
-                            type="text"
-                            placeholder="Enter City"
-                            maxLength="50"
-                            value={city}
-                            onChange={(e) => setCity(e.target.value)}
-                            />
-                    </div>
-
-                    <div>
-                        <label >
-                            <input className="Degree"
-                                type="radio"
-                                name="units"
-                                checked={unit === "imperial"}
-                                value="imperial"
-                                onChange={(e) => setUnit(e.target.value)}
-                                />
-                            Fahrenheit
-                        </label>
-                        <label>
-                            <input className="Degree"
-                                type="radio"
-                                name="units"
-                                checked={unit === "metric"}
-                                value="metric"
-                                onChange={(e) => setUnit(e.target.value)}
-                                />
-                            Celsius
-                        </label>
-                    </div>
-                    <div className="Btn">
-                        <Button type="submit" variant="info" >Get Forecast</Button>
-                    </div>
-                </div>
-            </form>
-
-            <Conditions responseObj={responseObj}  />
-            <img src="https://images.unsplash.com/photo-1501426026826-31c667bdf23d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fHN1bm55fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="flamingo float toy in a pool"/>
         </div>
     );
 }

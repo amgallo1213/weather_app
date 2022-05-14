@@ -3,7 +3,7 @@ import React from 'react';
 
 const Conditions = (props) => {
     return (
-        <div>
+        <div >
 {/* 
             {props.error && <small className="Small">Please enter a valid city.</small>}
                 {props.loading && <div>Loading...</div>} */}
@@ -15,8 +15,8 @@ const Conditions = (props) => {
                         <h4>It is currently <h3>{Math.round(props.responseObj.main.temp)} &#176;</h3> with {props.responseObj.weather[0].description}.</h4>
                     </div>
                     <div className="HighLow">
-                        <p><strong>High: {Math.round(props.responseObj.main.temp_max)}</strong></p>
-                        <p><strong>Low: {Math.floor(props.responseObj.main.temp_min)}</strong></p>
+                        <p><strong>High: {Math.round(props.responseObj.main.temp_max)}&#176;</strong></p>
+                        <p><strong>Low: {Math.floor(props.responseObj.main.temp_min)}&#176;</strong></p>
                     </div>
                 </div>
                 : null
