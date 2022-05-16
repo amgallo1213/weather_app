@@ -6,19 +6,10 @@ import Conditions from '../Conditions/Conditions';
 const Forecast = () => {
     let [city, setCity] = useState("");
     let [unit, setUnit] = useState("imperial");
-    // let [error, setError] = useState(false);
-    // let [loading, setLoading] = useState(false);
+
     let [responseObj, setResponseObj] = useState({});
     function getForecast(e) {
         e.preventDefault();
-
-        // if (city.length === 0) {
-        //     return setError(true);
-        // }
-        // setError(false);
-        // setResponseObj({});
-
-        // setLoading(true);
         
         let uriEncodedCity = encodeURIComponent(city);
 
@@ -33,11 +24,11 @@ const Forecast = () => {
             .then(response => response.json())
             .then(response => {
                 setResponseObj(response)
-                // if (response.cod !== 200) {
-                //     throw new Error()
-                // }
-                // setResponseObj(response);
-                // setLoading(false);
+                if (response.cod !== 200) {
+                    throw new Error()
+                }
+                setResponseObj(response);
+
             })
             .catch(err => console.error(err));
     }
@@ -49,8 +40,7 @@ const Forecast = () => {
                     <div className="Find">
                             <input type="text" placeholder="Enter City" maxLength="50"  value={city} 
                                 onChange={(e) => setCity(e.target.value)} />
-                        
-                            <Button type="submit" variant="info" className="Btn" >Get Forecast</Button>
+                            <Button type="submit" variant="info" className="Btn" >Get Weather!</Button>
                     </div>
                 </form>
             </div>
@@ -66,4 +56,3 @@ export default Forecast;
 
 
 
-// error={error} loading={loading}

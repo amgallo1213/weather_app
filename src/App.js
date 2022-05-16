@@ -1,8 +1,6 @@
 import './App.css';
-// import Conditions from './Conditions/Conditions';
 import Forecast from './Forecast/Forecast';
-import {Card} from 'react-bootstrap';
-import FiveDay from './FiveDayForecast/FiveDay';
+
 
 function App() {
   return (
@@ -20,9 +18,6 @@ function App() {
         <div className="Right">
         <div>
             <Forecast />
-          </div>
-          <div>
-            <FiveDay />
           </div>
         </div>
       </div>

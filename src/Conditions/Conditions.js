@@ -4,9 +4,6 @@ import React from 'react';
 const Conditions = (props) => {
     return (
         <div >
-{/* 
-            {props.error && <small className="Small">Please enter a valid city.</small>}
-                {props.loading && <div>Loading...</div>} */}
 
             {props.responseObj.cod === 200 ?
                 <div>
@@ -17,6 +14,7 @@ const Conditions = (props) => {
                     <div className="HighLow">
                         <p><strong>High: {Math.round(props.responseObj.main.temp_max)}&#176;</strong></p>
                         <p><strong>Low: {Math.floor(props.responseObj.main.temp_min)}&#176;</strong></p>
+                        <p><strong>Humidity: {Math.round(props.responseObj.main.humidity)}%</strong></p>
                     </div>
                 </div>
                 : null
